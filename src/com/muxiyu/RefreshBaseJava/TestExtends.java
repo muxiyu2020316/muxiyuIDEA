@@ -39,7 +39,7 @@ class Dog extends Animal{
         System.out.println("狗可以吠叫");
     }
 }
-class Employee {
+class Employee implements java.io.Serializable{
     private String name;
     private String address;
     private int number;
@@ -69,7 +69,7 @@ class Employee {
         return number;
     }
 }
-class Salary extends Employee {
+class Salary extends Employee implements java.io.Serializable {
     private double salary; // 全年工资
     public Salary(String name, String address, int number, double salary) {
 
