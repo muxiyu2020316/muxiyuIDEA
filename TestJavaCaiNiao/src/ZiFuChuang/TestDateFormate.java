@@ -32,6 +32,10 @@ public class TestDateFormate {
         int choose=input.nextInt();
         String sd=null;
         switch (choose){
+<<<<<<< HEAD
+=======
+
+>>>>>>> 第七次提交 2020 04022 22 37
             case 1:
                  sd= sdf.format(Long.parseLong(String.valueOf(timeStamp)));
                 break;
