@@ -5,6 +5,7 @@ class Food {}
 class Fruit extends Food {}
 class Apple extends Fruit {}
 class Banana extends Fruit{}
+//测试泛型
 public class GenericTest {
     //用来测试上街通配符和下界通配符的实例.
 public void testExtends(List<? extends Fruit> list){

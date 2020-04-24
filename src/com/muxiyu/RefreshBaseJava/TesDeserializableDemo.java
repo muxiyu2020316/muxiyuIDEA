@@ -2,7 +2,7 @@ package com.muxiyu.RefreshBaseJava;
 
 import java.io.FileInputStream;
 import java.io.ObjectInputStream;
-
+//序列化和反序列化
 public class TesDeserializableDemo {
     public static void main(String[] args) {
         Employement employement = null;

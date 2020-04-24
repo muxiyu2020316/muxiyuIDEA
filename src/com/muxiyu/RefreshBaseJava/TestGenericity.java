@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class TestGenericity {
-
+//泛型数组
     public static void main(String[] args) {
         //创建不同类型的数组测试
         Integer[] intArray = { 12, 32, 23,44, 51};

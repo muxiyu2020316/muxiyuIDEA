@@ -1,5 +1,6 @@
 package com.muxiyu.RefreshBaseJava;
 public class TestPolymorphic {
+    //多态测试
     public static void main(String[] args) {
         System.out.println("测试静态方法重写的区别");
         Animals animals=new Dogs();
