@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/CaiNiao/CaiNiao.iml" filepath="$PROJECT_DIR$/CaiNiao/CaiNiao.iml" />
       <module fileurl="file://$PROJECT_DIR$/Data structure/Data structure.iml" filepath="$PROJECT_DIR$/Data structure/Data structure.iml" />
-      <module fileurl="file://$PROJECT_DIR$/TestJavaCaiNiao/TestJavaCaiNiao.iml" filepath="$PROJECT_DIR$/TestJavaCaiNiao/TestJavaCaiNiao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TestJava/TestJava.iml" filepath="$PROJECT_DIR$/TestJava/TestJava.iml" />
       <module fileurl="file://$PROJECT_DIR$/muxiyuIDEA.iml" filepath="$PROJECT_DIR$/muxiyuIDEA.iml" />
     </modules>
   </component>
