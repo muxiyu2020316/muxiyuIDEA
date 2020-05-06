@@ -1,11 +1,9 @@
 package Synchronized;
 //商品类
- 
 public class Goods {
 boolean flag; 
    private String brand;//品牌
    private String name;//商品名称
-   
    public Goods() {
 	   
    }
@@ -28,7 +26,7 @@ public void setName(String name) {
 }
 //生产商品的同步方法
 public synchronized void set(String name,String brand) {
-//boolean flag = true有商品，所有生产者等待
+//boolean flag = true 有商品，所有生产者等待
 if(flag) {
 	try {
 		super.wait();
@@ -39,7 +37,6 @@ if(flag) {
 }
 //notify()  唤醒后从wait()之后的代码开始执行
    this.setBrand(brand);
-   
    try {
 		Thread.sleep(100);
 		
@@ -53,31 +50,27 @@ if(flag) {
    super.notify();
 }
 
-
-
 //取走商品的同步方法
 public synchronized void get () {
-//boolean flage = true有商品，所有生产者等待
-if(!flag) {
-	
-	try {
-		super.wait();
-	} catch (InterruptedException e) {
-		// TODO: handle exception
-		e.printStackTrace();
-	}
+	//boolean flage = true有商品，所有生产者等待
+	if(!flag) {
+		try {
+			super.wait();
+		} catch (InterruptedException e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		}
 }
 //notify()  唤醒后从wait()之后的代码开始执行
+	try {
+			Thread.sleep(100);
 
-try {
-		Thread.sleep(100);
-		
-	} catch (InterruptedException e) {
-    e.printStackTrace();
-	}
-System.out.println("-------->消费者取走了"+this.getBrand()+"---"+this.getName());
-flag=false;//取走商品
-//唤醒生产者线程
-super.notify();
-}
+		} catch (InterruptedException e) {
+		e.printStackTrace();
+		}
+	System.out.println("-------->消费者取走了"+this.getBrand()+"---"+this.getName());
+	flag=false;//取走商品
+	//唤醒生产者线程
+	super.notify();
+	 }
 }

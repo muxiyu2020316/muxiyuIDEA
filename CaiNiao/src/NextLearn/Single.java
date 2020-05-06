@@ -1,7 +1,7 @@
 package NextLearn;
 
 public class Single {
-    //饿汉式单例模式
+    /**饿汉式单例模式*/
     //1.构造方法私有化,调用类的人，不能new创建对象
     private Single(){
 
@@ -19,7 +19,7 @@ public class Single {
     }
 }
 class Signleton{
-    //懒汉式单例模式
+    /**懒汉式单例模式*/
     //1.构造器私有化,外部类无法访问本类构造器
     private Signleton(){}
     //先声明类的引用,有时配合static修饰类的引用

@@ -4,6 +4,8 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/CaiNiao/CaiNiao.iml" filepath="$PROJECT_DIR$/CaiNiao/CaiNiao.iml" />
       <module fileurl="file://$PROJECT_DIR$/Data structure/Data structure.iml" filepath="$PROJECT_DIR$/Data structure/Data structure.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JDBC/JDBC.iml" filepath="$PROJECT_DIR$/JDBC/JDBC.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SuanFa/SuanFa.iml" filepath="$PROJECT_DIR$/SuanFa/SuanFa.iml" />
       <module fileurl="file://$PROJECT_DIR$/TestJava/TestJava.iml" filepath="$PROJECT_DIR$/TestJava/TestJava.iml" />
       <module fileurl="file://$PROJECT_DIR$/muxiyuIDEA.iml" filepath="$PROJECT_DIR$/muxiyuIDEA.iml" />
     </modules>
