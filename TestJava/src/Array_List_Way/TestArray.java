@@ -12,7 +12,7 @@ public class TestArray {
     static ArrayList<String> objArray = new ArrayList<String>();
     static ArrayList<String> objArray2 = new ArrayList<String>();
     public static void main(String[] args) {
-    //TestSortSearch(array,3,"æ•°ç»„æ’åºç»“æœä¸º");
+    //TestSortSearch(array,3,"Êı×éÅÅĞò½á¹ûÎª");
         showPreAftArray(array);
         CollectionMinMax();
         ConnectArrays(numbers,people);
@@ -26,17 +26,17 @@ public class TestArray {
         objArray.add(1,"common2");
         TestContain(objArray,objArray2);
     }
-    public static void TestContain(ArrayList objArray1,ArrayList objArray2){
-      //é›†åˆç±»å‹
-        System.out.println("objArray2 çš„æ•°ç»„å…ƒç´ ï¼š"+objArray1);
-        System.out.println("objArray2 çš„æ•°ç»„å…ƒç´ ï¼š"+objArray2);
-        System.out.println("objArray æ˜¯å¦åŒ…å«å­—ç¬¦ä¸²common2? ï¼š "
-                +objArray1.contains("common2"));
-        System.out.println("objArray2 æ˜¯å¦åŒ…å«æ•°ç»„ objArray? ï¼š"
-                +objArray2.contains(objArray1) );
+    public static void TestContain(ArrayList objArray1,ArrayList objArray2) {
+        //¼¯ºÏÀàĞÍ
+        System.out.println("objArray2 µÄÊı×éÔªËØ£º" + objArray1);
+        System.out.println("objArray2 µÄÊı×éÔªËØ£º" + objArray2);
+        System.out.println("objArray ÊÇ·ñ°üº¬×Ö·û´®common2? £º "
+                + objArray1.contains("common2"));
+        System.out.println("objArray2 ÊÇ·ñ°üº¬Êı×é objArray? £º"
+                + objArray2.contains(objArray1));
     }
     public static void ConnectArrays(Object[] a, Object[] b){
-        //æ•°ç»„é“¾æ¥
+        //Êı×éÁ´½Ó
         Object[] c ;
         List list=new ArrayList(Arrays.asList(a));
         list.addAll(Arrays.asList(b));
@@ -44,46 +44,46 @@ public class TestArray {
         System.out.println(Arrays.toString(c));
     }
     public static void FindRepetetion(int[] a){
-        //æŸ¥æ‰¾é‡å¤å…ƒç´ 
+        //²éÕÒÖØ¸´ÔªËØ
         int count=0;
         for (int i = 0; i < a.length; i++) {
-            for (int j = i+1; j < a.length; j++) {
-              if(a[i]==a[j]){
-                  count+=1;
-              }
+            for (int j = i + 1; j < a.length; j++) {
+                if (a[i] == a[j]) {
+                    count += 1;
+                }
             }
-            if(count==1)
-                System.out.println( "é‡å¤å…ƒç´  : " + a[i]);
-            count=0;//å½’0,é‡æ–°è®¡æ•°
+            if (count == 1)
+                System.out.println("ÖØ¸´ÔªËØ : " + a[i]);
+            count = 0;//¹é0,ÖØĞÂ¼ÆÊı
         }
     }
     public static void FindNoRepetetion(int [] a) {
         int count=0;
         for(int j=0;j<a.length;j++) {
-            for(int k=0;k<a.length;k++) {  //int k =j+1;k<a.length;k++æ”¹æˆ int k=0;k<a.length;k++
-                if(a[j]==a[k]) {
+            for (int k = 0; k < a.length; k++) {  //int k =j+1;k<a.length;k++¸Ä³É int k=0;k<a.length;k++
+                if (a[j] == a[k]) {
                     count++;
                 }
             }
             if(count==1)
-                System.out.println( "ä¸é‡å¤å…ƒç´  : " +  a[j] );
+                System.out.println("²»ÖØ¸´ÔªËØ : " + a[j]);
             count = 0;
         }
     }
-    public static void CollectionMinMax(){
-        //è·å–æœ€å¤§æœ€å°æŒ‡
+    public static void CollectionMinMax() {
+        //»ñÈ¡×î´ó×îĞ¡Ö¸
         int min = (int) Collections.min(Arrays.asList(numbers));
         int max = (int) Collections.max(Arrays.asList(numbers));
-        System.out.println("æœ€å°å€¼: " + min);
-        System.out.println("æœ€å¤§å€¼: " + max);
+        System.out.println("×îĞ¡Öµ: " + min);
+        System.out.println("×î´óÖµ: " + max);
     }
-    public static void showPreAftArray(int array[]){
-        //æ•°ç»„ç¿»è½¬
-        System.out.println("åè½¬å‰æ’åº: " +Arrays.toString(array));
-        System.out.println("åè½¬åæ’åº: " + Arrays.toString(reserve(array)));
+    public static void showPreAftArray(int array[]) {
+        //Êı×é·­×ª
+        System.out.println("·´×ªÇ°ÅÅĞò: " + Arrays.toString(array));
+        System.out.println("·´×ªºóÅÅĞò: " + Arrays.toString(reserve(array)));
     }
     public static int[] reserve( int[] arr ){
-        //æ•°ç»„ç¿»è½¬,è‡ªå®šä¹‰æ–¹æ³•
+        //Êı×é·­×ª,×Ô¶¨Òå·½·¨
         int[] arr1 = new int[arr.length];
         for( int x=0;x<arr.length;x++ ){
             arr1[x] = arr[arr.length-x-1];
@@ -91,16 +91,16 @@ public class TestArray {
         return arr1 ;
     }
     public static void TestSortSearch(int array[],int i,String message){
-        //æ•°ç»„æ’åºå’ŒæŸ¥æ‰¾
+        //Êı×éÅÅĞòºÍ²éÕÒ
         Arrays.sort(array);
         printArray(message,array);
         Arrays.binarySearch(array,i);
         int index = Arrays.binarySearch(array, i);
-        System.out.println("äºŒåˆ†æŸ¥æ‰¾:å…ƒç´ "+i+"åœ¨ç¬¬ " + index + " ä¸ªä½ç½®");
+        System.out.println("¶ş·Ö²éÕÒ:ÔªËØ" + i + "ÔÚµÚ " + index + " ¸öÎ»ÖÃ");
 
     }
     private static void printArray(String message, int array[]) {
-        //è‡ªå®šä¹‰æ’åºä¿¡æ¯æ‰“å°
+        //×Ô¶¨ÒåÅÅĞòĞÅÏ¢´òÓ¡
         System.out.println(message + ": [length: " + array.length + "]");
         for (int i = 0; i < array.length; i++) {
             if(i != 0){

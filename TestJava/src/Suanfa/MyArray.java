@@ -1,4 +1,4 @@
-package 第二章;
+package Suanfa;
 
 public class MyArray {
     private int[] array;
@@ -24,11 +24,13 @@ public class MyArray {
         this.array=new int[capacity];
         size=0;
     }
+
     /**
-      * 数组插入元素
-      * @param element 插入的元素
-      * @param index 插入的位置
-      */
+     * 数组插入元素
+     *
+     * @param element 插入的元素
+     * @param index   插入的位置
+     */
     public void insert(int element, int index){
         if (index<0||index>size) {
             throw new IndexOutOfBoundsException("超出数组实际元素范围！");
@@ -65,6 +67,7 @@ public class MyArray {
          }
         System.out.println();
         }
+
     /**
      * 数组删除元素
      * @param index 删除的位置
@@ -81,6 +84,7 @@ public class MyArray {
         size--;
         return deleteElement;
     }
+
     /**
      * 数组删除元素
      * @param index 删除的位置
@@ -95,6 +99,7 @@ public class MyArray {
         size--;
         return deleteElement;
     }
+
     /**
      * 数组修改元素
      * @param element 修改的元素
@@ -106,6 +111,7 @@ public class MyArray {
         }
         array[index]=element;
     }
+
     /**
      * 数组查找元素
      * @param element 查的元素
@@ -118,6 +124,7 @@ public class MyArray {
         }
         return -1;
     }
+
     /**
      * 数组查找元素
      * @param index 查的元素下标

@@ -1,4 +1,4 @@
-package ╣зр╩уб;
+package Suanfa;
 
 import java.util.HashMap;
 

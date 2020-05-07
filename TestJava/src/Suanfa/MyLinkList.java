@@ -1,9 +1,9 @@
-package 第二章;
+package Suanfa;
 
 public class MyLinkList {
-        /**
-         * 内部构造类Node
-         */
+    /**
+     * 内部构造类Node
+     */
         private static class Node {
             int data;
             Node next;
@@ -55,7 +55,7 @@ public class MyLinkList {
             last=insertnode;
         }else if(index==0){
             //头部插入
-           insertnode.next=head;
+            insertnode.next=head;
            head=insertnode;
         }else if(size==index){
             //尾部插入
@@ -63,12 +63,12 @@ public class MyLinkList {
             last=insertnode;
         }else{
             //中间插入
-         //先获取要插入节点的上一个节点
-            Node preNode=get(index-1);
+            //先获取要插入节点的上一个节点
+            Node preNode = get(index - 1);
             //把上一个节点的下一个节点赋值给要插入节点的下一个节点
-            insertnode.next=preNode.next;
+            insertnode.next = preNode.next;
             //把要插入的节点变成前一个节点的下一个节点
-            preNode.next=insertnode;
+            preNode.next = insertnode;
         }
         size++;
     }
@@ -96,12 +96,12 @@ public class MyLinkList {
         }else{
             //删除中间节点
             //获取要删除元素的上一个节点
-            Node preNode=get(index-1);
+            Node preNode = get(index - 1);
             //获取要删除节点的下一个节点
             //Node nextNode=preNode.next.next;
-            Node nextNode=get(index+1);
-            removedNode=preNode.next;
-            preNode.next=nextNode;
+            Node nextNode = get(index + 1);
+            removedNode = preNode.next;
+            preNode.next = nextNode;
         }
         size--;
         //返回要删除的节点
