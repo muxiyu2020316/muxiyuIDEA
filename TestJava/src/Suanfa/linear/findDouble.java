@@ -1,4 +1,4 @@
-package Suanfa;
+package Suanfa.linear;
 
 import java.util.HashMap;
 

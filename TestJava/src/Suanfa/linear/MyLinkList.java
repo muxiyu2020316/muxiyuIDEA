@@ -1,4 +1,4 @@
-package Suanfa;
+package Suanfa.linear;
 
 public class MyLinkList {
     /**
@@ -7,27 +7,32 @@ public class MyLinkList {
         private static class Node {
             int data;
             Node next;
-            Node(int data) {
-                this.data = data;
-            }
-            public void setData(int data) {
-                this.data = data;
-            }
-            public int getData() {
-                return data;
-            }
+
+        Node(int data) {
+            this.data = data;
         }
+
+        public void setData(int data) {
+            this.data = data;
+        }
+
+        public int getData() {
+            return data;
+        }
+    }
+
     // 头节点指针
     private Node head;
     //尾节点指针
     private Node last;
     //链表实际长度
     private int size;
-        public static void main(String[] args) {
-            MyLinkList myLinkedList = new MyLinkList();
-            myLinkedList.insert(3,0);
-            myLinkedList.insert(7,1);
-            myLinkedList.insert(9,2);
+
+    public static void main(String[] args) {
+        MyLinkList myLinkedList = new MyLinkList();
+        myLinkedList.insert(3, 0);
+        myLinkedList.insert(7, 1);
+        myLinkedList.insert(9, 2);
             myLinkedList.insert(5,3);
             myLinkedList.output();
             myLinkedList.insert(6,1);
@@ -38,9 +43,11 @@ public class MyLinkList {
             myLinkedList.output();
             System.out.println(myLinkedList.get(2).getData());
         }
+
     /**
      * 链表插入元素
-     * @param data 插入元素
+     *
+     * @param data  插入元素
      * @param index 插入位置
      */
     public void insert(int data, int index){
@@ -50,18 +57,18 @@ public class MyLinkList {
         //创建一个新节点
         Node insertnode=new Node(data);
         if (size ==0) {
-          // 空链表
+            // 空链表
             head=insertnode;
             last=insertnode;
         }else if(index==0){
             //头部插入
             insertnode.next=head;
            head=insertnode;
-        }else if(size==index){
+        }else if (size == index) {
             //尾部插入
-            last.next=insertnode;
-            last=insertnode;
-        }else{
+            last.next = insertnode;
+            last = insertnode;
+        } else {
             //中间插入
             //先获取要插入节点的上一个节点
             Node preNode = get(index - 1);
@@ -72,8 +79,10 @@ public class MyLinkList {
         }
         size++;
     }
+
     /**
      * 链表删除元素
+     *
      * @param index 删除位置
      */
     public Node remove(int index){
@@ -86,14 +95,14 @@ public class MyLinkList {
             //删除头结点
             removedNode=head;
             head=head.next;
-        }else if(index==size-1){
+        } else if (index == size - 1) {
             //获取要删除元素的上一个节点
-            Node preNode=get(index-1);
-            removedNode=preNode.next;
+            Node preNode = get(index - 1);
+            removedNode = preNode.next;
             //preNode变成尾节点
-            preNode.next=null;
-            last=preNode;
-        }else{
+            preNode.next = null;
+            last = preNode;
+        } else {
             //删除中间节点
             //获取要删除元素的上一个节点
             Node preNode = get(index - 1);
@@ -107,6 +116,7 @@ public class MyLinkList {
         //返回要删除的节点
         return removedNode;
     }
+
     /**
      * 链表修改元素
      * @param data 修改的元素
@@ -115,6 +125,7 @@ public class MyLinkList {
         Node updataNode=get(index);
         updataNode.setData(data);
     }
+
     /**
      * 链表查找元素
      * @param index 查找位置
@@ -132,6 +143,7 @@ public class MyLinkList {
         //返回查找的节点,和数组类似
         return temp;
     }
+
     /**
      * 输出链表
      */

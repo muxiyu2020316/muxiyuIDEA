@@ -1,4 +1,4 @@
-package Suanfa;
+package Suanfa.linear;
 
 public class MyArray {
     private int[] array;
@@ -70,6 +70,7 @@ public class MyArray {
 
     /**
      * 数组删除元素
+     *
      * @param index 删除的位置
      */
     public int delete(int index){
@@ -87,11 +88,12 @@ public class MyArray {
 
     /**
      * 数组删除元素
+     *
      * @param index 删除的位置
-     * 前提是数组元素没有顺序要求
+     *              前提是数组元素没有顺序要求
      */
     public int deletelimit(int index){
-        if (index < 0||index>size) {
+        if (index < 0||index> size) {
             throw new IndexOutOfBoundsException("超出数组实际元 素范围！");
         }
         array[index]=array[size];
@@ -106,10 +108,10 @@ public class MyArray {
      * @param index 修改的位置的位置
      */
     public void update(int index,int element){
-        if (index < 0||index>size) {
+        if (index < 0||index> size) {
             throw new IndexOutOfBoundsException("超出数组实际元素范围！");
         }
-        array[index]=element;
+        array[index]= element;
     }
 
     /**
@@ -130,7 +132,7 @@ public class MyArray {
      * @param index 查的元素下标
      */
     public int get(int index){
-        if (index < 0||index>size) {
+        if (index < 0||index> size) {
             throw new IndexOutOfBoundsException("超出数组实际元素范围！");
         }
         return array[index];

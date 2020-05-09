@@ -1,4 +1,4 @@
-package Suanfa;
+package Suanfa.linear;
    /** 循环队列
      * 队列最大容量始终比数组长度小1
      * 确保可以循环下去而不触发临界值
