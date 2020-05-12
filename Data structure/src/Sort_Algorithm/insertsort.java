@@ -28,7 +28,6 @@ public class insertsort {
 				arr[j+1]=temp;
 			}
 		}
-		
 	}
 
 }

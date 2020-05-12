@@ -1,4 +1,4 @@
-package Sort_Algorithm;
+package Lookup_Algorithm;
 /**
  * ¶ş·Ö²éÕÒ
  */

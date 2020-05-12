@@ -109,7 +109,7 @@ public class PriorityQueueMax {
         minpriorityQueueMax.enQueue(10);
         minpriorityQueueMax.enQueue(2);
         minpriorityQueueMax.enQueue(7);
-//        System.out.println("出队元素：" + minpriorityQueueMax.deQueue());
+        System.out.println("出队元素：" + minpriorityQueueMax.deQueue());
 //        System.out.println("出队元素：" + minpriorityQueueMax.deQueue());
     }
 }

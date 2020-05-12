@@ -1,3 +1,5 @@
+package LearnJdbc4;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -16,13 +18,13 @@ public class Test {
             dbConn = DriverManager.getConnection(
                     dbURL, "sa", "123456");
             System.out.println("连接数据库成功！");
-            String sql="select * from student";
-            PreparedStatement statement=null;
-            statement=dbConn.prepareStatement(sql);
-            ResultSet res=null;
-            res=statement.executeQuery();
-            while(res.next()){
-                String title=res.getString("name");
+            String sql = "select * from student";
+            PreparedStatement statement = null;
+            statement = dbConn.prepareStatement(sql);
+            ResultSet res = null;
+            res = statement.executeQuery();
+            while (res.next()) {
+                String title = res.getString("name");
                 System.out.println(title);
             }
         }catch(Exception e) {
